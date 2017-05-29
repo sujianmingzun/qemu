@@ -1904,7 +1904,7 @@ static int postcopy_start(MigrationState *ms, bool *old_vm_running)
      * will notice we're in POSTCOPY_ACTIVE and not actually
      * wrap their state up here
      */
-    qemu_file_set_rate_limit(ms->to_dst_file, INT64_MAX);
+    // qemu_file_set_rate_limit(ms->to_dst_file, INT64_MAX);
     if (migrate_postcopy_ram()) {
         /* Ping just for debugging, helps line traces up */
         qemu_savevm_send_ping(ms->to_dst_file, 2);
